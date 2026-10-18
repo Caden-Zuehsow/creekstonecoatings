@@ -8,22 +8,459 @@
   <title>Creekstone Coatings | Professional Floor Coatings</title>
   <meta name="description" content="Epoxy, polyaspartic, concrete polishing, grinding and line striping in Northeast Indiana.">
 
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Exo+2:ital,wght@0,700;0,800;1,800&family=Michroma&display=swap" rel="stylesheet">
-</head>
-  <style>
 
+  <style>
     :root {
-  --background: #45474A;
-  --orange: #FD5E01;
-  --charcoal: #231F20;
-  --white: #FFFFFF;
-  --chrome: #A7A9AC;
-}
+      --background: #45474A;
+      --orange: #FD5E01;
+      --charcoal: #231F20;
+      --white: #FFFFFF;
+      --chrome: #A7A9AC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--white);
+      font-family: "Barlow", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h1, h2, h3 {
+      font-family: "Exo 2", sans-serif;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    h1, h2 {
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--orange);
+    }
+
+    .navbar {
+      min-height: 88px;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .logo span {
+      font-family: "Exo 2", sans-serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo b {
+      color: var(--chrome);
+    }
+
+    .logo strong {
+      color: var(--orange);
+    }
+
+    .logo small {
+      margin-top: 5px;
+      color: var(--white);
+      font-family: "Michroma", sans-serif;
+      font-size: 0.58rem;
+      letter-spacing: 5px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    nav .nav-button {
+      padding: 11px 17px;
+      border: 1px solid var(--orange);
+      color: var(--white);
+    }
+
+    nav .nav-button:hover {
+      background: var(--charcoal);
+      color: var(--white);
+      border-color: var(--charcoal);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 55px;
+      padding: 85px 7%;
+      min-height: 610px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      margin-bottom: 20px;
+      color: var(--orange);
+      font-family: "Michroma", sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 440px;
+      margin-bottom: 30px;
+      color: #E0E0E0;
+      font-size: 1.15rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 23px;
+      background: var(--orange);
+      border: 1px solid var(--orange);
+      color: var(--white);
+      font-weight: 700;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--charcoal);
+      border-color: var(--charcoal);
+    }
+
+    .hero-image {
+      position: relative;
+      height: 430px;
+    }
+
+    .hero-image::after {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-image img {
+      height: 100%;
+    }
+
+    .services {
+      padding: 85px 7%;
+      background: rgba(0, 0, 0, 0.09);
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      border-left: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .service {
+      position: relative;
+      min-height: 190px;
+      padding: 25px;
+      border-right: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      transition: background 0.2s ease;
+    }
+
+    .service:hover {
+      background: var(--charcoal);
+    }
+
+    .service > span {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--orange);
+      font-family: "Michroma", sans-serif;
+      font-size: 0.7rem;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: #D5D5D5;
+      font-size: 0.95rem;
+    }
+
+    .service > b {
+      position: absolute;
+      top: 24px;
+      right: 25px;
+      color: var(--chrome);
+      font-size: 1.2rem;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+      padding: 100px 7%;
+    }
+
+    .feature h2 {
+      margin-bottom: 25px;
+    }
+
+    .feature p:not(.eyebrow) {
+      max-width: 500px;
+      margin-bottom: 28px;
+      color: #E0E0E0;
+    }
+
+    .feature img {
+      height: 400px;
+    }
+
+    .pool {
+      padding: 100px 7%;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background:
+        linear-gradient(90deg, rgba(35, 31, 32, 0.88), rgba(35, 31, 32, 0.25)),
+        url("https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover;
+    }
+
+    .pool h2 {
+      margin-bottom: 20px;
+    }
+
+    .pool > p:not(.eyebrow) {
+      max-width: 480px;
+      margin-bottom: 25px;
+      color: #F0F0F0;
+    }
+
+    .metallic {
+      padding: 65px 7%;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .metallic .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .metallic h2 {
+      margin-bottom: 15px;
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+    }
+
+    .metallic p:last-child {
+      color: #E0E0E0;
+    }
+
+    .contact {
+      padding: 100px 7%;
+    }
+
+    .contact h2 {
+      margin-bottom: 22px;
+    }
+
+    .contact > p:not(.eyebrow) {
+      margin-bottom: 28px;
+      color: #E0E0E0;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 30px 7%;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    footer p {
+      color: #D0D0D0;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        padding: 22px 5%;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 22px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 65px 6%;
+      }
+
+      .hero-image {
+        height: 350px;
+      }
+
+      .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature {
+        gap: 35px;
+        padding: 75px 6%;
+      }
+
+      .feature img {
+        height: 330px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+      }
+
+      .hero {
+        padding: 55px 6%;
+      }
+
+      .hero-image {
+        height: 270px;
+      }
+
+      .services {
+        padding: 65px 6%;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        min-height: 160px;
+      }
+
+      .feature {
+        grid-template-columns: 1fr;
+        padding: 70px 6%;
+      }
+
+      .feature img {
+        height: 270px;
+      }
+
+      .pool {
+        padding: 75px 6%;
+        min-height: 400px;
+      }
+
+      .metallic {
+        padding: 55px 6%;
+      }
+
+      .contact {
+        padding: 75px 6%;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 6%;
+      }
+
+      footer p {
+        text-align: left;
+      }
+    }
   </style>
+</head>
 
 <body>
-
   <header class="navbar">
     <a href="#" class="logo">
       <span><b>CREEK</b><strong>STONE</strong></span>
@@ -39,11 +476,9 @@
   </header>
 
   <main>
-
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">Northeast Indiana · Professional Floor Coatings</p>
-
         <h1>FLOORS BUILT<br>TO <span>LAST.</span></h1>
 
         <p class="hero-description">
@@ -152,12 +587,12 @@
       <p class="eyebrow">Start Your Project</p>
       <h2>LET'S GET<br><span>TO WORK.</span></h2>
       <p>Have a floor that needs a better finish? Let's talk.</p>
-      <!-- Replace this link with your actual phone number or estimate form. -->
+
+      <!-- Replace this with your actual email address. -->
       <a href="mailto:YOUR-EMAIL@example.com" class="button">
         Request an Estimate ↗
       </a>
     </section>
-
   </main>
 
   <footer>
@@ -167,7 +602,5 @@
     </a>
     <p>© 2026 Creekstone Coatings. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
