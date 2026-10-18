@@ -2,629 +2,648 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics: Replace G-XXXXXXXXXX with your measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#231F20">
+  <meta name="description" content="Creekstone Coatings provides professional epoxy and polyaspartic floor coatings across Northeast Indiana.">
 
   <title>Creekstone Coatings | Professional Floor Coatings</title>
-  <meta name="description" content="Professional epoxy coatings, polyaspartic floors, concrete polishing, grinding, line striping and pool decks in Northeast Indiana.">
-
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Exo+2:ital,wght@0,700;0,800;1,800&family=Michroma&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --background: #45474A;
-      --header: #A7A9AC;
-      --orange: #FD5E01;
-      --charcoal: #231F20;
-      --white: #FFFFFF;
-      --light-text: #E4E4E4;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--white);
-      font-family: "Barlow", Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    h1, h2, h3 {
-      font-family: "Exo 2", Arial, sans-serif;
-      font-weight: 800;
-      line-height: 1.1;
-    }
-
-    h1, h2 {
-      font-style: italic;
-      text-transform: uppercase;
-    }
-
-    h1 span, h2 span {
-      color: var(--orange);
-    }
-
-    /* HEADER */
-
-    header {
-      background: var(--header);
-      color: var(--charcoal);
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .logo {
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-
-    .logo-title {
-      font-family: "Exo 2", sans-serif;
-      font-size: 1.9rem;
-      font-style: italic;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .logo-title .creek {
-      color: var(--charcoal);
-    }
-
-    .logo-title .stone {
-      color: var(--orange);
-    }
-
-    .logo-subtitle {
-      margin-top: 5px;
-      font-family: "Michroma", sans-serif;
-      font-size: 0.58rem;
-      letter-spacing: 5px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.4rem;
-    }
-
-    nav a {
-      font-weight: 700;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--orange);
-    }
-
-    nav .nav-button {
-      border: 2px solid var(--charcoal);
-      padding: 0.65rem 1rem;
-    }
-
-    nav .nav-button:hover {
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-      color: var(--orange);
-    }
-
-    /* HERO */
-
-    .hero {
-      position: relative;
-      min-height: 540px;
-      padding: 6rem 7%;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, rgba(35,31,32,0.92), rgba(35,31,32,0.35)),
-        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
-    }
-
-    .hero-content {
-      position: relative;
-      max-width: 700px;
-    }
-
-    .eyebrow {
-      margin: 0 0 1rem;
-      color: var(--orange);
-      font-family: "Michroma", sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      margin: 0 0 1.5rem;
-      font-size: clamp(3.2rem, 8vw, 6.5rem);
-      letter-spacing: -2px;
-    }
-
-    .hero p:not(.eyebrow) {
-      max-width: 550px;
-      margin-bottom: 2rem;
-      color: var(--light-text);
-      font-size: 1.2rem;
-    }
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.85rem 1.35rem;
-      border: 2px solid var(--orange);
-      background: var(--orange);
-      color: var(--white);
-      font-weight: 700;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-      color: var(--white);
-    }
-
-    /* GENERAL SECTIONS */
-
-    .sections {
-      padding: 2rem 7%;
-    }
-
-    .mission {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    .mission h2,
-    .section-heading h2,
-    .sponsors h2 {
-      margin-top: 0;
-    }
-
-    .mission h2 {
-      color: var(--orange);
-      font-size: 2.6rem;
-    }
-
-    .mission p {
-      max-width: 800px;
-      margin: auto;
-      color: var(--light-text);
-      font-size: 1.2rem;
-    }
-
-    /* SERVICES */
-
-    .services {
-      padding: 3rem 0;
-    }
-
-    .section-heading {
-      margin-bottom: 2rem;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border-top: 1px solid rgba(255,255,255,0.2);
-      border-left: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .service {
-      position: relative;
-      min-height: 175px;
-      padding: 1.5rem;
-      border-right: 1px solid rgba(255,255,255,0.2);
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      transition: background 0.2s ease;
-    }
-
-    .service:hover {
-      background: var(--charcoal);
-    }
-
-    .service-number {
-      color: var(--orange);
-      font-family: "Michroma", sans-serif;
-      font-size: 0.7rem;
-    }
-
-    .service h3 {
-      margin: 1rem 0 0.5rem;
-      font-size: 1.35rem;
-    }
-
-    .service p {
-      margin: 0;
-      color: var(--light-text);
-    }
-
-    .service-arrow {
-      position: absolute;
-      top: 1.4rem;
-      right: 1.5rem;
-      color: var(--orange);
-    }
-
-    /* INDUSTRIAL FEATURE */
-
-    .feature {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 3rem;
-      padding: 4rem 0;
-    }
-
-    .feature h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    .feature p:not(.eyebrow) {
-      max-width: 520px;
-      margin-bottom: 1.5rem;
-      color: var(--light-text);
-    }
-
-    .feature img {
-      width: 100%;
-      height: 370px;
-      object-fit: cover;
-    }
-
-    /* POOL DECKS */
-
-    .pool {
-      padding: 5rem 7%;
-      background:
-        linear-gradient(90deg, rgba(35,31,32,0.9), rgba(35,31,32,0.35)),
-        url("https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
-    }
-
-    .pool h2 {
-      font-size: clamp(2.7rem, 6vw, 4.5rem);
-    }
-
-    .pool > p:not(.eyebrow) {
-      max-width: 500px;
-      color: var(--light-text);
-    }
-
-    /* METALLIC COATINGS */
-
-    .metallic {
-      margin-top: 3rem;
-      padding: 3rem 1rem;
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .metallic h2 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-    }
-
-    .metallic p:last-child {
-      color: var(--light-text);
-    }
-
-    /* CONTACT */
-
-    .contact {
-      padding: 5rem 0;
-    }
-
-    .contact h2 {
-      font-size: clamp(3rem, 7vw, 5rem);
-    }
-
-    .contact p:not(.eyebrow) {
-      color: var(--light-text);
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: var(--header);
-      color: var(--charcoal);
-      padding: 1.5rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    footer p {
-      margin: 0;
-      text-align: right;
-      font-size: 0.9rem;
-    }
-
-    footer .logo-title .creek {
-      color: var(--charcoal);
-    }
-
-    footer .logo-subtitle {
-      color: var(--charcoal);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-      header {
-        flex-direction: column;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .hero {
-        min-height: 450px;
-        padding: 4rem 6%;
-      }
-
-      .sections {
-        padding: 1.5rem 6%;
-      }
-
-      .service-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .feature {
-        gap: 2rem;
-      }
-
-      .feature img {
-        height: 300px;
-      }
-    }
-
-    @media (max-width: 580px) {
-      .logo-title {
-        font-size: 1.7rem;
-      }
-
-      nav {
-        gap: 0.7rem 1rem;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        padding: 4rem 6%;
-      }
-
-      .hero h1 {
-        font-size: 3.4rem;
-      }
-
-      .service-list,
-      .feature {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        min-height: 150px;
-      }
-
-      .feature {
-        padding: 3rem 0;
-      }
-
-      .feature img {
-        height: 250px;
-      }
-
-      .pool {
-        padding: 4rem 6%;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      footer p {
-        text-align: left;
-      }
-    }
-  </style>
+  <!-- Creekstone Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Exo+2:ital,wght@0,800;1,800&family=Michroma&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #FD5E01;
+  --orange-dark: #D45204;
+  --silver: #A7A9AC;
+  --charcoal: #231F20;
+  --black: #000000;
+  --white: #FFFFFF;
+  --card: #2D292A;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow', Arial, sans-serif;
+  background: var(--charcoal);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/* Header */
+header {
+  background: var(--black);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 2px solid #353132;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--white);
+  text-decoration: none;
+  min-width: 0;
+}
+
+.logo-title img {
+  height: 52px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.logo-title h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: var(--silver);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 7rem 1.5rem;
+  background: var(--black);
+  overflow: hidden;
+}
+
+/* Optional hero image:
+   Add a real project photo to the background when available. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(0, 0, 0, 0.88),
+    rgba(35, 31, 32, 0.78)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+  color: var(--white);
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #D0CDCE;
+  font-size: 1.2rem;
+}
+
+/* Small labels */
+.eyebrow {
+  font-family: 'Michroma', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 1rem;
+}
+
+/* Main layout */
+.sections {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: auto;
+}
+
+/* Introduction */
+.intro {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 950px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+}
+
+.intro h2 span {
+  color: var(--orange);
+}
+
+.intro p {
+  font-size: 1.15rem;
+  color: #D0CDCE;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Content blocks */
+.block {
+  background: var(--card);
+  color: var(--white);
+  border: 1px solid #403A3B;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.block h2 {
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 2px solid var(--orange);
+  margin: 0;
+  padding: 1rem 1.25rem;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.block p,
+.block ul {
+  padding: 1rem 1.25rem;
+  margin: 0;
+}
+
+.block ul {
+  padding-left: 3rem;
+}
+
+.block li {
+  margin-bottom: 0.5rem;
+}
+
+.block h3 {
+  font-family: 'Michroma', sans-serif;
+  color: var(--silver);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin: 1.5rem 1.25rem 0;
+  text-transform: uppercase;
+}
+
+/* Project images */
+.projects {
+  padding: 3rem 0;
+}
+
+.projects h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.projects h2 span {
+  color: var(--orange);
+}
+
+.section-description {
+  text-align: center;
+  color: var(--silver);
+  margin: 0 auto 2rem;
+  max-width: 650px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: var(--black);
+  border: 1px solid #403A3B;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project-image {
+  aspect-ratio: 4 / 3;
+  background: #343031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--silver);
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image-placeholder {
+  font-family: 'Michroma', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.project-card h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem 1rem 0.25rem;
+}
+
+.project-card p {
+  color: var(--silver);
+  padding: 0 1rem 1.25rem;
+  margin: 0;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.8rem 1.4rem;
+  background: var(--orange);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--orange-dark);
+  color: var(--white);
+}
+
+.button-outline {
+  background: transparent;
+  border: 1px solid var(--silver);
+  color: var(--white);
+}
+
+.button-outline:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Contact section */
+.contact {
+  background: var(--black);
+  border-top: 1px solid #403A3B;
+  border-bottom: 1px solid #403A3B;
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+}
+
+.contact h2 span {
+  color: var(--orange);
+}
+
+.contact p {
+  color: var(--silver);
+  max-width: 650px;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--black);
+  color: var(--silver);
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.4rem 0;
+}
+
+footer a {
+  color: var(--silver);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--orange);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 0.8rem 1rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .logo-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 5rem 1rem;
+  }
+
+  .sections {
+    padding: 1rem;
+  }
+
+  .intro {
+    padding: 3rem 0.5rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .block ul {
+    padding-left: 2.5rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <a href="#" class="logo" aria-label="Creekstone Coatings Home">
-      <span class="logo-title">
-        <span class="creek">CREEK</span><span class="stone">STONE</span>
-      </span>
-      <span class="logo-subtitle">COATINGS</span>
+<header>
+  <a href="/" class="logo-title">
+    <!-- Replace with the Creekstone logo file -->
+    <img src="/creekstone-logo.png" alt="Creekstone Coatings logo">
+    <h2>Creekstone Coatings</h2>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/services/">Services</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Garage · Shop · Patio · Commercial</div>
+
+    <h1>Floors Built to <span>Take a Beating</span></h1>
+
+    <p>
+      Professional epoxy and polyaspartic floor coatings for garages,
+      shops and commercial spaces across Northeast Indiana.
+    </p>
+
+    <a href="/contact/" class="button">Request an Estimate</a>
+  </div>
+</section>
+
+<main class="sections">
+
+  <!-- INTRODUCTION -->
+  <section class="intro">
+    <div class="eyebrow">Creekstone Coatings</div>
+
+    <h2>Built for Work.<br><span>Finished to Last.</span></h2>
+
+    <p>
+      A clean, durable floor can transform a garage, workshop or
+      commercial space. Learn more about our coating options,
+      installation process and available finishes.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="block">
+    <h2>Our Services</h2>
+
+    <h3>Garage Floors</h3>
+    <p>
+      Add a durable, easy-to-maintain finish to residential garages
+      with a professional floor coating system.
+    </p>
+
+    <h3>Shops and Workshops</h3>
+    <p>
+      Explore coating options designed for busy workspaces, equipment
+      areas and everyday use.
+    </p>
+
+    <h3>Commercial Spaces</h3>
+    <p>
+      Find flooring solutions suited to commercial environments,
+      based on the space, surface condition and project requirements.
+    </p>
+
+    <a href="/services/" class="button" style="margin-left: 1.25rem;">
+      Explore Services →
     </a>
+  </section>
 
-    <nav aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#industrial">Industrial</a>
-      <a href="#pool-decks">Pool Decks</a>
-      <a href="#contact" class="nav-button">Get an Estimate ↗</a>
-    </nav>
-  </header>
+  <!-- PROJECT GALLERY -->
+  <section class="projects">
+    <div class="eyebrow" style="text-align:center;">Our Work</div>
 
-  <main>
+    <h2>Recent <span>Projects</span></h2>
 
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Northeast Indiana · Professional Floor Coatings</p>
-        <h1>FLOORS BUILT<br>TO <span>LAST.</span></h1>
-        <p>
-          High-performance flooring for garages, factories,
-          commercial spaces and more.
-        </p>
-        <a href="#services" class="button">Explore Our Services ↗</a>
-      </div>
-    </section>
+    <p class="section-description">
+      Browse completed installations and examples of available
+      finishes. Project photographs will be added here.
+    </p>
 
-    <div class="sections">
+    <div class="project-grid">
 
-      <section class="mission">
-        <h2>Built on Performance.</h2>
-        <p>
-          Durable coatings. Professional preparation. Quality finishes.
-          Creekstone Coatings delivers flooring solutions built for
-          demanding spaces and everyday use.
-        </p>
-      </section>
-
-      <section class="services" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">What We Do</p>
-          <h2>OUR <span>SERVICES.</span></h2>
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Add a verified garage-floor project photo here -->
+          <div class="project-image-placeholder">
+            GARAGE PROJECT PHOTO
+          </div>
         </div>
 
-        <div class="service-list">
-          <a href="#industrial" class="service">
-            <span class="service-number">01</span>
-            <span class="service-arrow">↗</span>
-            <h3>Epoxy Coatings</h3>
-            <p>Durable industrial and factory flooring.</p>
-          </a>
+        <h3>Garage Flooring</h3>
+        <p>Residential floor coating installation.</p>
+      </article>
 
-          <a href="#contact" class="service">
-            <span class="service-number">02</span>
-            <span class="service-arrow">↗</span>
-            <h3>Polyaspartic Floors</h3>
-            <p>Garage floors and outdoor applications.</p>
-          </a>
-
-          <a href="#industrial" class="service">
-            <span class="service-number">03</span>
-            <span class="service-arrow">↗</span>
-            <h3>Concrete Polishing</h3>
-            <p>Clean, professional commercial floor finishes.</p>
-          </a>
-
-          <a href="#industrial" class="service">
-            <span class="service-number">04</span>
-            <span class="service-arrow">↗</span>
-            <h3>Concrete Grinding</h3>
-            <p>Surface preparation and concrete restoration.</p>
-          </a>
-
-          <a href="#industrial" class="service">
-            <span class="service-number">05</span>
-            <span class="service-arrow">↗</span>
-            <h3>Line Striping</h3>
-            <p>Clear markings for industrial and commercial spaces.</p>
-          </a>
-
-          <a href="#pool-decks" class="service">
-            <span class="service-number">06</span>
-            <span class="service-arrow">↗</span>
-            <h3>Swimming Pool Decks</h3>
-            <p>Finished outdoor surfaces for poolside spaces.</p>
-          </a>
-        </div>
-      </section>
-
-      <section class="feature" id="industrial">
-        <div>
-          <p class="eyebrow">Industrial & Commercial</p>
-          <h2>MADE FOR<br><span>THE WORK.</span></h2>
-          <p>
-            From factories and workshops to commercial facilities,
-            we help create durable flooring surfaces suited to
-            demanding environments.
-          </p>
-          <a href="#contact" class="button">Discuss Your Project ↗</a>
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Add a verified shop-floor project photo here -->
+          <div class="project-image-placeholder">
+            SHOP PROJECT PHOTO
+          </div>
         </div>
 
-        <img
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85"
-          alt="Industrial workspace"
-          loading="lazy"
-        >
-      </section>
+        <h3>Shop Flooring</h3>
+        <p>Workshop flooring and surface finishing.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Add a verified commercial project photo here -->
+          <div class="project-image-placeholder">
+            COMMERCIAL PROJECT PHOTO
+          </div>
+        </div>
+
+        <h3>Commercial Coatings</h3>
+        <p>Floor coating for commercial environments.</p>
+      </article>
 
     </div>
 
-    <section class="pool" id="pool-decks">
-      <p class="eyebrow">Outdoor Surfaces</p>
-      <h2>POOL DECKS.<br><span>DONE RIGHT.</span></h2>
-      <p>
-        Give your poolside a fresh finish with professionally
-        prepared outdoor concrete surfaces.
-      </p>
-      <a href="#contact" class="button">Ask About Pool Decks ↗</a>
-    </section>
-
-    <section class="metallic">
-      <p class="eyebrow">Coming Soon</p>
-      <h2>METALLIC FLOOR COATINGS</h2>
-      <p>Distinctive finishes. A completely different look.</p>
-    </section>
-
-    <section class="contact sections" id="contact">
-      <p class="eyebrow">Start Your Project</p>
-      <h2>LET'S GET<br><span>TO WORK.</span></h2>
-      <p>Have a floor that needs a better finish? Let's talk.</p>
-
-      <!-- Replace with Creekstone's actual contact email. -->
-      <a href="mailto:YOUR-EMAIL@example.com" class="button">
-        Request an Estimate ↗
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="/projects/" class="button button-outline">
+        View All Projects →
       </a>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- ABOUT -->
+  <section class="block">
+    <h2>About Creekstone</h2>
 
-  <footer>
-    <a href="#" class="logo" aria-label="Creekstone Coatings Home">
-      <span class="logo-title">
-        <span class="creek">CREEK</span><span class="stone">STONE</span>
-      </span>
-      <span class="logo-subtitle">COATINGS</span>
+    <h3>Our Approach</h3>
+    <p>
+      Every project begins with understanding the space, evaluating
+      the existing concrete and selecting an appropriate coating system.
+    </p>
+
+    <h3>Our Service Area</h3>
+    <p>
+      Serving Northeast Indiana. Contact us to discuss your location
+      and project requirements.
+    </p>
+
+    <h3>Our Standards</h3>
+    <ul>
+      <li>Attention to surface preparation</li>
+      <li>Coating systems selected for the project</li>
+      <li>Clear communication throughout installation</li>
+      <li>Professional finishing and cleanup</li>
+    </ul>
+
+    <a href="/about/" class="button" style="margin-left:1.25rem;">
+      Learn More →
     </a>
+  </section>
 
-    <p>© 2026 Creekstone Coatings. All rights reserved.</p>
-  </footer>
+</main>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="eyebrow">Start Your Project</div>
+
+  <h2>Ready for a <span>Better Floor?</span></h2>
+
+  <p>
+    Get in touch to discuss your garage, shop, patio or commercial
+    flooring project and request an estimate.
+  </p>
+
+  <a href="/contact/" class="button">Contact Creekstone</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 Creekstone Coatings. All rights reserved.</p>
+  <p>Northeast Indiana</p>
+  <p>
+    <a href="/privacy/">Privacy Policy</a>
+    &nbsp; | &nbsp;
+    <a href="/terms/">Terms of Service</a>
+  </p>
+</footer>
 
 </body>
 </html>
