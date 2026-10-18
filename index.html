@@ -1,70 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics: Replace G-XXXXXXXXXX with your measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#231F20">
-  <meta name="description" content="Creekstone Coatings provides professional epoxy and polyaspartic floor coatings across Northeast Indiana.">
-
-  <title>Creekstone Coatings | Professional Floor Coatings</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <!-- Creekstone Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Exo+2:ital,wght@0,800;1,800&family=Michroma&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creekstone Coatings</title>
+<link rel="icon" href="/favicon.ico">
 
 <style>
 :root {
   --orange: #FD5E01;
-  --orange-dark: #D45204;
-  --silver: #A7A9AC;
   --charcoal: #231F20;
   --black: #000000;
+  --silver: #A7A9AC;
   --white: #FFFFFF;
-  --card: #2D292A;
 }
 
-/* Base */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: 'Barlow', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: var(--charcoal);
   color: var(--white);
-  line-height: 1.6;
 }
 
-a {
-  color: inherit;
-}
-
-/* Header */
 header {
   background: var(--black);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  border-bottom: 2px solid #353132;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .logo-title {
@@ -73,326 +40,150 @@ header {
   gap: 0.75rem;
   color: var(--white);
   text-decoration: none;
-  min-width: 0;
 }
 
-.logo-title img {
-  height: 52px;
-  max-width: 180px;
-  object-fit: contain;
-}
+.logo-title img { height: 50px; }
 
 .logo-title h2 {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  text-transform: uppercase;
   margin: 0;
-  font-size: 1.45rem;
+  font-size: 1.4rem;
 }
 
 nav {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 nav a {
   color: var(--silver);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
+  font-weight: bold;
 }
 
-nav a:hover {
-  color: var(--orange);
-}
+nav a:hover { color: var(--orange); }
 
-/* Hero */
 .hero {
-  position: relative;
   text-align: center;
-  padding: 7rem 1.5rem;
+  padding: 6rem 1rem;
   background: var(--black);
-  overflow: hidden;
-}
-
-/* Optional hero image:
-   Add a real project photo to the background when available. */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    110deg,
-    rgba(0, 0, 0, 0.88),
-    rgba(35, 31, 32, 0.78)
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 950px;
-  margin: auto;
 }
 
 .hero h1 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1.05;
-  margin: 0 0 1.5rem;
-  color: var(--white);
-}
-
-.hero h1 span {
-  color: var(--orange);
+  font-size: 3rem;
+  margin: 0 0 1rem;
 }
 
 .hero p {
-  max-width: 720px;
-  margin: 0 auto;
-  color: #D0CDCE;
+  max-width: 700px;
+  margin: auto;
+  color: var(--silver);
   font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* Small labels */
-.eyebrow {
-  font-family: 'Michroma', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--silver);
+.sections {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.mission {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.mission h2 {
+  font-size: 2.3rem;
   margin-bottom: 1rem;
 }
 
-/* Main layout */
-.sections {
-  max-width: 1200px;
-  padding: 2rem;
-  margin: auto;
-}
-
-/* Introduction */
-.intro {
-  text-align: center;
-  padding: 4rem 1rem;
-  max-width: 950px;
-  margin: auto;
-}
-
-.intro h2 {
-  font-family: 'Exo 2', sans-serif;
-  font-style: italic;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  line-height: 1.15;
-  margin: 0 0 1.25rem;
-}
-
-.intro h2 span {
-  color: var(--orange);
-}
-
-.intro p {
-  font-size: 1.15rem;
-  color: #D0CDCE;
+.mission p {
   max-width: 800px;
   margin: auto;
+  color: var(--silver);
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* Content blocks */
 .block {
-  background: var(--card);
+  background: #302B2C;
   color: var(--white);
-  border: 1px solid #403A3B;
-  border-radius: 6px;
+  border: 1px solid #454041;
+  border-radius: 18px;
   overflow: hidden;
   margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .block h2 {
   background: var(--black);
-  color: var(--white);
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 3px solid var(--orange);
   margin: 0;
-  padding: 1rem 1.25rem;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.45rem;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.block p,
-.block ul {
-  padding: 1rem 1.25rem;
-  margin: 0;
-}
-
-.block ul {
-  padding-left: 3rem;
-}
-
-.block li {
-  margin-bottom: 0.5rem;
-}
-
-.block h3 {
-  font-family: 'Michroma', sans-serif;
-  color: var(--silver);
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  margin: 1.5rem 1.25rem 0;
-  text-transform: uppercase;
-}
-
-/* Project images */
-.projects {
-  padding: 3rem 0;
-}
-
-.projects h2 {
-  font-family: 'Exo 2', sans-serif;
-  font-style: italic;
-  font-size: 2.3rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.projects h2 span {
-  color: var(--orange);
-}
-
-.section-description {
-  text-align: center;
-  color: var(--silver);
-  margin: 0 auto 2rem;
-  max-width: 650px;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-}
-
-.project-card {
-  background: var(--black);
-  border: 1px solid #403A3B;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.project-image {
-  aspect-ratio: 4 / 3;
-  background: #343031;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--silver);
-  text-align: center;
   padding: 1rem;
+  font-size: 1.4rem;
 }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-image-placeholder {
-  font-family: 'Michroma', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-}
-
-.project-card h3 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin: 1rem 1rem 0.25rem;
-}
-
-.project-card p {
-  color: var(--silver);
-  padding: 0 1rem 1.25rem;
+.block p, .block ul {
+  padding: 1rem 1.5rem;
   margin: 0;
+  line-height: 1.6;
 }
 
-/* Buttons */
 .button {
   display: inline-block;
-  margin: 1rem 0;
-  padding: 0.8rem 1.4rem;
+  margin: 1rem 1.5rem 1.5rem;
+  padding: 0.8rem 1.3rem;
   background: var(--orange);
   color: var(--black);
   text-decoration: none;
-  border-radius: 3px;
-  font-weight: 700;
-  transition: background 0.2s ease;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-.button:hover {
-  background: var(--orange-dark);
-  color: var(--white);
-}
+.button:hover { background: #D45204; color: white; }
 
-.button-outline {
-  background: transparent;
-  border: 1px solid var(--silver);
-  color: var(--white);
-}
-
-.button-outline:hover {
-  background: var(--white);
-  color: var(--black);
-}
-
-/* Contact section */
-.contact {
-  background: var(--black);
-  border-top: 1px solid #403A3B;
-  border-bottom: 1px solid #403A3B;
+.projects {
   text-align: center;
-  padding: 3.5rem 1.5rem;
-  margin-top: 2rem;
+  padding: 3rem 0;
 }
 
-.contact h2 {
-  font-family: 'Exo 2', sans-serif;
-  font-style: italic;
-  text-transform: uppercase;
-  font-size: 2.2rem;
-  margin: 0 0 1rem;
+.projects h2 { font-size: 2rem; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
-.contact h2 span {
-  color: var(--orange);
+.project {
+  background: #302B2C;
+  border: 1px solid #454041;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
-.contact p {
+.project img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #191718;
+}
+
+.project h3 { padding: 0 1rem; }
+
+.project p {
+  padding: 0 1rem 1rem;
   color: var(--silver);
-  max-width: 650px;
-  margin: auto;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1.5rem;
   background: var(--black);
   color: var(--silver);
-  margin-top: 0;
-  font-size: 0.95rem;
-}
-
-footer p {
-  margin: 0.4rem 0;
+  margin-top: 2rem;
 }
 
 footer a {
@@ -400,59 +191,13 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
-  color: var(--orange);
-}
+footer a:hover { color: var(--orange); }
 
-/* Responsive */
-@media (max-width: 850px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 0.8rem 1rem;
-  }
-
-  nav a {
-    font-size: 0.95rem;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 550px) {
-  .logo-title h2 {
-    font-size: 1.2rem;
-  }
-
-  .hero {
-    padding: 5rem 1rem;
-  }
-
-  .sections {
-    padding: 1rem;
-  }
-
-  .intro {
-    padding: 3rem 0.5rem;
-  }
-
-  .intro h2 {
-    font-size: 2rem;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .block ul {
-    padding-left: 2.5rem;
-  }
+@media (max-width: 650px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; }
+  .hero h1 { font-size: 2.2rem; }
+  .sections { padding: 1rem; }
 }
 </style>
 </head>
@@ -461,12 +206,11 @@ footer a:hover {
 
 <header>
   <a href="/" class="logo-title">
-    <!-- Replace with the Creekstone logo file -->
-    <img src="/creekstone-logo.png" alt="Creekstone Coatings logo">
+    <img src="/creekstone-logo.png" alt="Creekstone Coatings">
     <h2>Creekstone Coatings</h2>
   </a>
 
-  <nav aria-label="Main navigation">
+  <nav>
     <a href="/">Home</a>
     <a href="/services/">Services</a>
     <a href="/projects/">Projects</a>
@@ -476,171 +220,80 @@ footer a:hover {
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Garage · Shop · Patio · Commercial</div>
-
-    <h1>Floors Built to <span>Take a Beating</span></h1>
-
-    <p>
-      Professional epoxy and polyaspartic floor coatings for garages,
-      shops and commercial spaces across Northeast Indiana.
-    </p>
-
-    <a href="/contact/" class="button">Request an Estimate</a>
-  </div>
+  <h1>Floors Built to Last</h1>
+  <p>
+    Professional epoxy and polyaspartic floor coatings for garages,
+    shops and commercial spaces across Northeast Indiana.
+  </p>
+  <a href="/contact/" class="button">Request an Estimate</a>
 </section>
 
 <main class="sections">
 
-  <!-- INTRODUCTION -->
-  <section class="intro">
-    <div class="eyebrow">Creekstone Coatings</div>
-
-    <h2>Built for Work.<br><span>Finished to Last.</span></h2>
-
+  <section class="mission">
+    <h2>Creekstone Coatings</h2>
     <p>
-      A clean, durable floor can transform a garage, workshop or
-      commercial space. Learn more about our coating options,
-      installation process and available finishes.
+      Durable finishes, professional installation and flooring
+      solutions built around your space.
     </p>
   </section>
 
-  <!-- SERVICES -->
   <section class="block">
     <h2>Our Services</h2>
-
-    <h3>Garage Floors</h3>
     <p>
-      Add a durable, easy-to-maintain finish to residential garages
-      with a professional floor coating system.
+      Explore floor coating options for garages, workshops, patios
+      and commercial spaces.
     </p>
-
-    <h3>Shops and Workshops</h3>
-    <p>
-      Explore coating options designed for busy workspaces, equipment
-      areas and everyday use.
-    </p>
-
-    <h3>Commercial Spaces</h3>
-    <p>
-      Find flooring solutions suited to commercial environments,
-      based on the space, surface condition and project requirements.
-    </p>
-
-    <a href="/services/" class="button" style="margin-left: 1.25rem;">
-      Explore Services →
-    </a>
+    <ul>
+      <li>Garage floor coatings</li>
+      <li>Shop and workshop floors</li>
+      <li>Commercial flooring</li>
+      <li>Epoxy and polyaspartic systems</li>
+    </ul>
+    <a href="/services/" class="button">View Services →</a>
   </section>
 
-  <!-- PROJECT GALLERY -->
   <section class="projects">
-    <div class="eyebrow" style="text-align:center;">Our Work</div>
-
-    <h2>Recent <span>Projects</span></h2>
-
-    <p class="section-description">
-      Browse completed installations and examples of available
-      finishes. Project photographs will be added here.
-    </p>
+    <h2>Our Projects</h2>
+    <p>Explore our work and finished floor installations.</p>
 
     <div class="project-grid">
+      <div class="project">
+        <img src="/images/garage-project.jpg" alt="Garage floor coating project">
+        <h3>Garage Floors</h3>
+        <p>Residential flooring projects.</p>
+      </div>
 
-      <article class="project-card">
-        <div class="project-image">
-          <!-- Add a verified garage-floor project photo here -->
-          <div class="project-image-placeholder">
-            GARAGE PROJECT PHOTO
-          </div>
-        </div>
+      <div class="project">
+        <img src="/images/shop-project.jpg" alt="Workshop floor coating project">
+        <h3>Shop Floors</h3>
+        <p>Durable workshop finishes.</p>
+      </div>
 
-        <h3>Garage Flooring</h3>
-        <p>Residential floor coating installation.</p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <!-- Add a verified shop-floor project photo here -->
-          <div class="project-image-placeholder">
-            SHOP PROJECT PHOTO
-          </div>
-        </div>
-
-        <h3>Shop Flooring</h3>
-        <p>Workshop flooring and surface finishing.</p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <!-- Add a verified commercial project photo here -->
-          <div class="project-image-placeholder">
-            COMMERCIAL PROJECT PHOTO
-          </div>
-        </div>
-
-        <h3>Commercial Coatings</h3>
-        <p>Floor coating for commercial environments.</p>
-      </article>
-
-    </div>
-
-    <div style="text-align:center; margin-top:1rem;">
-      <a href="/projects/" class="button button-outline">
-        View All Projects →
-      </a>
+      <div class="project">
+        <img src="/images/commercial-project.jpg" alt="Commercial floor coating project">
+        <h3>Commercial</h3>
+        <p>Professional commercial flooring.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="block">
-    <h2>About Creekstone</h2>
-
-    <h3>Our Approach</h3>
+    <h2>About Us</h2>
     <p>
-      Every project begins with understanding the space, evaluating
-      the existing concrete and selecting an appropriate coating system.
+      We help property owners across Northeast Indiana improve their
+      spaces with professional floor coating systems.
     </p>
-
-    <h3>Our Service Area</h3>
-    <p>
-      Serving Northeast Indiana. Contact us to discuss your location
-      and project requirements.
-    </p>
-
-    <h3>Our Standards</h3>
-    <ul>
-      <li>Attention to surface preparation</li>
-      <li>Coating systems selected for the project</li>
-      <li>Clear communication throughout installation</li>
-      <li>Professional finishing and cleanup</li>
-    </ul>
-
-    <a href="/about/" class="button" style="margin-left:1.25rem;">
-      Learn More →
-    </a>
+    <a href="/about/" class="button">Learn More →</a>
   </section>
 
 </main>
-
-<!-- CONTACT -->
-<section class="contact">
-  <div class="eyebrow">Start Your Project</div>
-
-  <h2>Ready for a <span>Better Floor?</span></h2>
-
-  <p>
-    Get in touch to discuss your garage, shop, patio or commercial
-    flooring project and request an estimate.
-  </p>
-
-  <a href="/contact/" class="button">Contact Creekstone</a>
-</section>
 
 <footer>
   <p>&copy; 2026 Creekstone Coatings. All rights reserved.</p>
   <p>Northeast Indiana</p>
   <p>
-    <a href="/privacy/">Privacy Policy</a>
-    &nbsp; | &nbsp;
+    <a href="/privacy/">Privacy Policy</a> |
     <a href="/terms/">Terms of Service</a>
   </p>
 </footer>
